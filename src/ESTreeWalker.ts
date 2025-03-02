@@ -5,7 +5,7 @@
 import type * as Acorn from 'acorn';
 
 export class ESTreeWalker {
-  readonly #beforeVisit: (arg0: Acorn.ESTree) => unknown;
+  readonly #beforeVisit: (arg0: Acorn.ESTree.Node) => unknown;
   readonly #afterVisit: (arg0: Acorn.ESTree.Node) => unknown;
 
   constructor(beforeVisit: (arg0: Acorn.ESTree.Node) => unknown, afterVisit: ((arg0: Acorn.ESTree.Node) => unknown)) {

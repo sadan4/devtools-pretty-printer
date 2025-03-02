@@ -1,0 +1,14 @@
+diff --git a/index.d.ts b/index.d.ts
+index 81a351f9d67eee9141d26d48d9a62aeeb91d3dca..5e7f6cc9e88a2c20ccfc44b9d754c6679119679d 100644
+--- a/index.d.ts
++++ b/index.d.ts
+@@ -23,6 +23,9 @@ export interface BaseNodeWithoutComments {
+     type: string;
+     loc?: SourceLocation | null | undefined;
+     range?: [number, number] | undefined;
++    parent?: BaseNodeWithoutComments | null;
++    start: number;
++    end: number;
+ }
+ 
+ export interface BaseNode extends BaseNodeWithoutComments {

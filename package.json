@@ -1,8 +1,13 @@
 {
-  "name": "devtools-pretty-printer",
+  "name": "@sadan/devtools-pretty-printer",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "An extracted version of the pretty printer found in chrome devtools sources panel.",
+  "type": "module",
+  "exports": {
+    "require": "./dist/index.js",
+    "import": "./dist/index.mjs"
+  },
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,6 +20,12 @@
   },
   "devDependencies": {
     "@types/estree": "^1.0.6",
+    "esbuild": "^0.25.0",
     "typescript": "^5.7.3"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "@types/estree": "patches/@types__estree.patch"
+    }
   }
 }
