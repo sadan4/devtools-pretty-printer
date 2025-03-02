@@ -1,0 +1,7 @@
+src
+node_modules
+build.sh
+tsconfig.json
+patches
+scripts
+.npmignore
