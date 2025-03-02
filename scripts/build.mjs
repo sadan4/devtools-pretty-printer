@@ -6,7 +6,9 @@ import * as esbuild from 'esbuild';
 const opts = {
     entryPoints: ['./src/index.ts'],
     bundle: true,
+    external: ["acorn"],
     minify: false,
+    treeShaking: true,
     sourcemap: false,
     outdir: "./dist",
 }
