@@ -3,7 +3,6 @@
   "private": false,
   "version": "1.0.2",
   "description": "An extracted version of the pretty printer found in chrome devtools sources panel.",
-  "type": "module",
   "exports": {
     "require": "./dist/index.js",
     "import": "./dist/index.mjs"
